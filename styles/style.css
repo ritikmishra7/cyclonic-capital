@@ -87,7 +87,7 @@
 
 /* MAIN SECTION */
 .main-section {
-    margin: 200px;
+    margin: 30px 200px 200px 200px;
 }
 
 .top-section {
@@ -95,7 +95,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-block: 100px;
+    margin-top: 20px;
+    margin-bottom: 5px;
 }
 
 .hero-section {
@@ -236,8 +237,13 @@
 
 .planet-video-wrapper {
     position: absolute;
-    right: -20%;
+    right: -15%;
     top: 9%;
+    overflow: hidden;
+}
+
+#planet-video {
+    overflow: hidden;
 }
 
 .card-1,
@@ -253,7 +259,7 @@
     position: absolute;
     transform: scaleX(-1);
     filter: FlipH;
-    left: -15%;
+    left: -25%;
     top: 48%;
 }
 
@@ -590,11 +596,13 @@
     .planet-video-wrapper {
         width: 60%;
         right: 1%;
+        overflow: hidden;
     }
 
     #planet-video {
         width: 100%;
         justify-content: flex-end;
+        overflow: hidden;
     }
 
     #galaxy-video {
