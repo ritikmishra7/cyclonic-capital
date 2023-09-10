@@ -24,28 +24,63 @@ function setInitialNavbarBackground() {
 
 setInitialNavbarBackground();
 
-
-// for video playback
-const videos = document.querySelectorAll(".video-file");
-
-function isElementInViewport(el) {
-    const rect = el.getBoundingClientRect();
-    return (
-        rect.top >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
-    );
-}
-
-function handleVideoPlayPause() {
-    videos.forEach(video => {
-        if (isElementInViewport(video)) {
+// handle video playback
+function playVideoWhenInView(entries, observer) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const video = entry.target;
+            video.currentTime = 0;
             video.play();
         } else {
+            const video = entry.target;
             video.pause();
         }
     });
 }
 
-window.addEventListener("scroll", handleVideoPlayPause);
+// Set up the Intersection Observer for each video
+const videos = document.querySelectorAll('.video-file');
+const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.45,
+};
 
-handleVideoPlayPause();
+videos.forEach(video => {
+    const observer = new IntersectionObserver(playVideoWhenInView, observerOptions);
+    observer.observe(video);
+
+    video.addEventListener('ended', () => {
+        video.currentTime = 0; // Set video to start from the beginning
+        video.play();
+    });
+});
+
+
+
+// for hamburger menu
+const hamburger = document.getElementById('hamburger-btn');
+const hamburgerContainer = document.getElementById('hamburger-container');
+const closeHamburger = document.getElementById('close-btn');
+const hamburgerLinks = document.querySelectorAll('.hamburger-link');
+
+hamburger.addEventListener('click', () => {
+    hamburgerContainer.classList.add('show-container');
+    closeHamburger.style.display = 'block';
+    hamburger.style.display = 'none';
+});
+
+
+closeHamburger.addEventListener('click', () => {
+    hamburgerContainer.classList.remove('show-container');
+    hamburger.style.display = 'block';
+    closeHamburger.style.display = 'none';
+});
+
+hamburgerLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        hamburgerContainer.classList.remove('show-container');
+        hamburger.style.display = 'block';
+        closeHamburger.style.display = 'none';
+    });
+});

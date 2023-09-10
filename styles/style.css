@@ -4,7 +4,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* overflow-y: hidden; */
+    font-family: 'Mulish', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+button {
+    font-family: 'Mulish', sans-serif;
+    font-weight: 500;
 }
 
 .image-wrapper {
@@ -27,6 +42,14 @@
     z-index: 9999;
     width: 100%;
     justify-content: space-between;
+}
+
+#hamburger-menu {
+    display: none;
+}
+
+#hamburger-menu:hover {
+    cursor: pointer;
 }
 
 .fixed-navbar {
@@ -60,17 +83,53 @@
     background: inherit;
 }
 
+.links-section {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40px;
+}
+
+.links-section a {
+    text-decoration: none;
+    color: #8A8FA2;
+    font-weight: 500;
+}
+
+.links-section a:hover {
+    color: white;
+}
+
 .socials-section {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
+    float: right;
     margin-right: 20px;
     background: inherit;
 }
 
+.hamburger-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: max-content;
+}
+
 .socials-section a {
     background: inherit;
+}
+
+#about,
+#roadmap {
+    height: 40px;
+}
+
+#rewards,
+#community {
+    height: 100px;
 }
 
 .socials-section svg {
@@ -82,6 +141,60 @@
     cursor: pointer;
     color: white;
     background: inherit;
+}
+
+.hamburger-container {
+    height: 100%;
+    margin-top: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 20px;
+    width: 100%;
+    background-color: #000000;
+    position: fixed;
+    top: -120%;
+    left: 0;
+    transition: top 0.4s;
+    z-index: 99999;
+}
+
+.show-container {
+    top: 0;
+}
+
+.hamburger-uls {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.hamburger-uls li a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Mulish', sans-serif;
+    color: #8A8FA2;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.hamburger-btn,
+.close-btn {
+    border: none;
+    color: transparent;
+    background-color: transparent;
+}
+
+.close-btn:hover {
+    cursor: pointer;
+}
+
+.close-btn {
+    display: none;
 }
 
 
@@ -96,7 +209,6 @@
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
-    margin-bottom: 5px;
 }
 
 .hero-section {
@@ -116,18 +228,77 @@
     text-align: center;
 }
 
+.blackhole-video {
+    border-color: #528ffffe;
+    z-index: 3;
+}
+
+.blackhole-video-wrapper {
+    background-image: radial-gradient(ellipse at center, rgba(26, 31, 80, 0.5), transparent, transparent);
+    padding-bottom: 200px;
+    z-index: 2;
+}
+
+.sparkle-star {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.blackhole-star-1 {
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    color: rgb(184, 184, 184);
+    background-image: radial-gradient(rgba(40, 55, 101, 0.5), rgba(6, 7, 10, 0.5));
+}
+
+.blackhole-star-2 {
+    position: absolute;
+    top: 60%;
+    right: 10%;
+    width: 60px;
+    height: 60px;
+    color: rgb(255, 251, 192);
+    background-image: radial-gradient(rgba(253, 253, 253, 0.03), transparent);
+    box-shadow: rgb(255, 244, 94);
+}
+
+.blackhole-star-3 {
+    position: absolute;
+    top: 70%;
+    right: 15%;
+    color: rgb(184, 184, 184);
+    background-image: radial-gradient(rgba(40, 55, 101, 0.5), rgba(6, 7, 10, 0.5));
+}
+
+
+
+.outer-layer {
+    z-index: 1;
+    background-image: linear-gradient(to bottom, transparent 0%, rgb(16, 19, 41) 50%, transparent 100%);
+    width: 98vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+}
+
 .hero-btn-a {
     text-decoration: none;
+    z-index: 5;
 }
 
 .hero-btn {
     padding: 15px 25px;
-    border-radius: 16px;
+    border-radius: 10px;
     background-image: linear-gradient(to right, #2C57D0, #7B73FA);
     border: none;
     font-size: 1.2rem;
     position: relative;
     color: white;
+    user-select: none;
 }
 
 .hero-btn:hover {
@@ -143,17 +314,50 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 90%;
+    margin: auto;
 }
+
+#blackhole-video {
+    transform: rotate(-3deg) scale(1.5);
+    z-index: -1;
+}
+
 
 /* Cards section */
 
 .cards-section {
     color: white;
-    margin-block: 100px;
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
     position: relative;
     /* overflow: hidden; */
+}
+
+.nft-star-1 {
+    position: absolute;
+    bottom: 10%;
+    left: -10%;
+    color: rgb(184, 184, 184);
+    background-image: radial-gradient(rgba(40, 55, 101, 0.5), rgba(6, 7, 10, 0.5));
+}
+
+.nft-star-2 {
+    position: absolute;
+    bottom: 20%;
+    right: -10%;
+    color: rgb(184, 184, 184);
+    background-image: radial-gradient(rgba(40, 55, 101, 0.5), rgba(6, 7, 10, 0.5));
+}
+
+.nft-star-3 {
+    position: absolute;
+    bottom: 3%;
+    right: 8%;
+    color: rgb(255, 251, 192);
+    background-image: radial-gradient(rgba(253, 253, 253, 0.03), transparent);
+    box-shadow: rgb(255, 244, 94);
 }
 
 
@@ -251,6 +455,12 @@
     align-self: flex-start;
 }
 
+.nft-star {
+    position: absolute;
+    top: 5%;
+    right: -15%;
+}
+
 .card-2 {
     align-self: flex-end;
 }
@@ -303,7 +513,6 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
-    margin-bottom: 100px;
 }
 
 .loyalty-section-header {
@@ -425,7 +634,36 @@
     color: white;
     position: relative;
     margin-bottom: 400px;
+    position: relative;
 }
+
+.community-star-1 {
+    position: absolute;
+    top: 20%;
+    width: 60px;
+    height: 60px;
+    color: rgb(255, 251, 192);
+    background-image: radial-gradient(rgba(253, 253, 253, 0.03), transparent);
+    box-shadow: rgb(255, 244, 94);
+}
+
+.community-star-2 {
+    position: absolute;
+    top: 28%;
+    left: -11%;
+    color: rgb(184, 184, 184);
+    background-image: radial-gradient(rgba(40, 55, 101, 0.5), rgba(6, 7, 10, 0.5));
+}
+
+.community-star-3 {
+    position: absolute;
+    top: 35%;
+    left: -8%;
+    color: rgb(184, 184, 184);
+    background-image: radial-gradient(rgba(40, 55, 101, 0.5), rgba(6, 7, 10, 0.5));
+}
+
+
 
 .community-heading {
     display: flex;
@@ -510,7 +748,7 @@
     gap: 40px;
     background-image: radial-gradient(rgb(40, 55, 101), rgb(6, 7, 10));
     padding-block: 100px;
-    z-index: 9999;
+    z-index: 999;
     text-align: center;
 }
 
@@ -578,18 +816,29 @@
         align-self: center;
     }
 
+    .alpha-phase {
+        width: 60%;
+    }
+
 }
 
 
-
 @media screen and (max-width: 1199px) {
-    .main-section {
-        width: 98%;
-        margin: auto;
+
+    .links-section {
+        display: none;
+    }
+
+    #hamburger-menu {
+        display: block;
     }
 
     #blackhole-video {
-        width: 80%;
+        transform: scale(1.2);
+    }
+
+    .main-section {
+        width: 98%;
         margin: auto;
     }
 
@@ -625,6 +874,26 @@
         align-items: center;
     }
 
+    .nft-star-2 {
+        bottom: 20%;
+        right: 5%;
+    }
+
+    .community-star-1 {
+        top: 9%;
+        left: 28%;
+    }
+
+    .community-star-2 {
+        top: 25%;
+        left: 5%;
+    }
+
+    .community-star-3 {
+        top: 30%;
+        left: 8%;
+    }
+
     .loyalty-section-header {
         flex-direction: column;
         align-items: flex-start;
@@ -640,6 +909,15 @@
         width: 90%;
     }
 }
+
+@media screen and (max-width: 1000px) {
+
+    #blackhole-video {
+        transform: scale(1.1);
+    }
+}
+
+
 
 @media screen and (max-width: 500px) {
     .socials-section {

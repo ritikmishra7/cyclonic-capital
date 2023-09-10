@@ -18,7 +18,22 @@
             <div class="logo-section">
                 <img src="assets/images/logo.jpg" alt="logo" class="logo">
                 <p class="logo-text">CYCLONIC CAPITAL</p>
+                <div class="links-section">
+                    <a href="#about">
+                        About
+                    </a>
+                    <a href="#rewards">
+                        Rewards
+                    </a>
+                    <a href="#roadmap">
+                        Roadmap
+                    </a>
+                    <a href="#community">
+                        Community
+                    </a>
+                </div>
             </div>
+
             <div class="socials-section">
                 <a href="#">
                     <svg width="24px" height="24px" viewBox="0 0 1200 1227" fill="currentColor"
@@ -52,24 +67,79 @@
                             fill="currentColor" />
                     </svg>
                 </a>
+                <button type="menu" class="hamburger-btn" id="hamburger-btn">
+                    <img src="assets/images/menu.svg" alt="hamburger-menu" id="hamburger-menu">
+                </button>
+                <button type="menu" class="close-btn" id="close-btn">
+                    <img src="assets/images/close.svg" alt="close-menu" id="close-menu">
+                </button>
+            </div>
+
+            <div class="hamburger-container" id="hamburger-container">
+                <ul class="hamburger-uls">
+                    <li>
+                        <a href="#about" class="hamburger-link">
+                            About
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#rewards" class="hamburger-link">
+                            Rewards
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#roadmap" class="hamburger-link">
+                            Roadmap
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#community" class="hamburger-link">
+                            Community
+                        </a>
+                    </li>
+                </ul>
             </div>
         </nav>
-        <main id="main-section" class="main-section">
+        <main class="main-section">
             <div class="top-section">
                 <div class="hero-section">
-                    <p class="hero-text">An open and lucrative DEX for everyone.</p>
+                    <p class="hero-text">An Open and Lucrative DEX for Everyone.</p>
                     <a href="#" class="hero-btn-a">
-                        <button class="hero-btn">
+                        <button class="hero-btn" tabindex="-1">
                             Launch App (Testnet)
                         </button>
                     </a>
                 </div>
-                <div class="video-section">
-                    <video preload="auto" controlslist="nodownload" id="blackhole-video" class="video-file">
-                        <source type="video/webm" src="assets/videos/blackhole.webm">
-                    </video>
+                <div class="outer-layer">
+                    <div class="sparkle-star blackhole-star-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 100 125" x="0px"
+                            y="0px" fill="currentColor">
+                            <path
+                                d="M57.91,50.67,70,50l-12.09-.67a7.69,7.69,0,0,1-7.24-7.24L50,30l-.67,12.09a7.69,7.69,0,0,1-7.24,7.24L30,50l12.09.67a7.69,7.69,0,0,1,7.24,7.24L50,70l.67-12.09A7.69,7.69,0,0,1,57.91,50.67Z" />
+                        </svg>
+                    </div>
+                    <div class="sparkle-star blackhole-star-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 100 125" x="0px"
+                            y="0px" fill="currentColor">
+                            <path
+                                d="M57.91,50.67,70,50l-12.09-.67a7.69,7.69,0,0,1-7.24-7.24L50,30l-.67,12.09a7.69,7.69,0,0,1-7.24,7.24L30,50l12.09.67a7.69,7.69,0,0,1,7.24,7.24L50,70l.67-12.09A7.69,7.69,0,0,1,57.91,50.67Z" />
+                        </svg>
+                    </div>
+                    <div class="sparkle-star blackhole-star-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 100 125" x="0px"
+                            y="0px" fill="currentColor">
+                            <path
+                                d="M57.91,50.67,70,50l-12.09-.67a7.69,7.69,0,0,1-7.24-7.24L50,30l-.67,12.09a7.69,7.69,0,0,1-7.24,7.24L30,50l12.09.67a7.69,7.69,0,0,1,7.24,7.24L50,70l.67-12.09A7.69,7.69,0,0,1,57.91,50.67Z" />
+                        </svg>
+                    </div>
+                    <div class="video-section blackhole-video-wrapper">
+                        <video preload="auto" controlslist="nodownload" id="blackhole-video" class="video-file">
+                            <source type="video/webm" src="assets/videos/blackhole.webm">
+                        </video>
+                    </div>
                 </div>
             </div>
+            <div id="about"></div>
             <div class="cards-section">
                 <div class="card card-1">
                     <p class="card-heading">Achieve Greater and Consistent Returns with <span>Dual Investment.</span>
@@ -80,7 +150,7 @@
                     </p>
                     <div class="card-btn-section">
                         <a href="#">
-                            <button class="card-btn">
+                            <button class="card-btn" tabindex="-1">
                                 Invest Now
                             </button>
                         </a>
@@ -108,7 +178,7 @@
                     </p>
                     <div class="card-btn-section">
                         <a href="#">
-                            <button class="card-btn">
+                            <button class="card-btn" tabindex="-1">
                                 Trade Now
                             </button>
                         </a>
@@ -137,7 +207,7 @@
                     </p>
                     <div class="card-btn-section">
                         <a href="#">
-                            <button class="card-btn">
+                            <button class="card-btn" tabindex="-1">
                                 Join Now
                             </button>
                         </a>
@@ -152,9 +222,31 @@
                         </div>
                     </div>
                 </div>
+                <div class="sparkle-star nft-star-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 100 125" x="0px" y="0px"
+                        fill="currentColor">
+                        <path
+                            d="M57.91,50.67,70,50l-12.09-.67a7.69,7.69,0,0,1-7.24-7.24L50,30l-.67,12.09a7.69,7.69,0,0,1-7.24,7.24L30,50l12.09.67a7.69,7.69,0,0,1,7.24,7.24L50,70l.67-12.09A7.69,7.69,0,0,1,57.91,50.67Z" />
+                    </svg>
+                </div>
+                <div class="sparkle-star nft-star-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 100 125" x="0px" y="0px"
+                        fill="currentColor">
+                        <path
+                            d="M57.91,50.67,70,50l-12.09-.67a7.69,7.69,0,0,1-7.24-7.24L50,30l-.67,12.09a7.69,7.69,0,0,1-7.24,7.24L30,50l12.09.67a7.69,7.69,0,0,1,7.24,7.24L50,70l.67-12.09A7.69,7.69,0,0,1,57.91,50.67Z" />
+                    </svg>
+                </div>
+                <div class="sparkle-star nft-star-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 100 125" x="0px" y="0px"
+                        fill="currentColor">
+                        <path
+                            d="M57.91,50.67,70,50l-12.09-.67a7.69,7.69,0,0,1-7.24-7.24L50,30l-.67,12.09a7.69,7.69,0,0,1-7.24,7.24L30,50l12.09.67a7.69,7.69,0,0,1,7.24,7.24L50,70l.67-12.09A7.69,7.69,0,0,1,57.91,50.67Z" />
+                    </svg>
+                </div>
             </div>
+            <div id="rewards"></div>
             <div class="join-section">
-                <div class="calender-section" class="calender-section-img-wrapper">
+                <div class="calender-section calender-section-img-wrapper">
                     <img src="assets/images/calender.svg" alt="calender" class="calender-section-img">
                 </div>
                 <h4 class="join-now-heading">Get on board before we skyrocket to new heights!</h4>
@@ -190,12 +282,13 @@
                     upcoming airdrops and special perks in the referral program.
                 </p>
                 <a href="#" class="loyalty-section-btn-wrapper">
-                    <button class="loyalty-section-btn">
+                    <button class="loyalty-section-btn" tabindex="-1">
                         <img src="assets/images/meteor.svg" alt="Launch">
                         <p>Enter Galxe</p>
                     </button>
                 </a>
             </div>
+            <div id="roadmap"></div>
             <div class="roadmap-section">
                 <div class="roadmap-header">
                     <img src="assets/images/roadmapIcon.svg" alt="roadmap">
@@ -253,7 +346,29 @@
 
                 </div>
             </div>
+            <div id="community"></div>
             <div class="community-section">
+                <div class="sparkle-star community-star-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 100 125" x="0px" y="0px"
+                        fill="currentColor">
+                        <path
+                            d="M57.91,50.67,70,50l-12.09-.67a7.69,7.69,0,0,1-7.24-7.24L50,30l-.67,12.09a7.69,7.69,0,0,1-7.24,7.24L30,50l12.09.67a7.69,7.69,0,0,1,7.24,7.24L50,70l.67-12.09A7.69,7.69,0,0,1,57.91,50.67Z" />
+                    </svg>
+                </div>
+                <div class="sparkle-star community-star-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 100 125" x="0px" y="0px"
+                        fill="currentColor">
+                        <path
+                            d="M57.91,50.67,70,50l-12.09-.67a7.69,7.69,0,0,1-7.24-7.24L50,30l-.67,12.09a7.69,7.69,0,0,1-7.24,7.24L30,50l12.09.67a7.69,7.69,0,0,1,7.24,7.24L50,70l.67-12.09A7.69,7.69,0,0,1,57.91,50.67Z" />
+                    </svg>
+                </div>
+                <div class="sparkle-star community-star-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 100 125" x="0px" y="0px"
+                        fill="currentColor">
+                        <path
+                            d="M57.91,50.67,70,50l-12.09-.67a7.69,7.69,0,0,1-7.24-7.24L50,30l-.67,12.09a7.69,7.69,0,0,1-7.24,7.24L30,50l12.09.67a7.69,7.69,0,0,1,7.24,7.24L50,70l.67-12.09A7.69,7.69,0,0,1,57.91,50.67Z" />
+                    </svg>
+                </div>
                 <div class="community-heading">
                     <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_10416_88168)">
@@ -354,9 +469,9 @@
             <div class="profitable-section">
                 <h4 class="profitable-section-heading">Lucrative Liquidity Provision. Accessible to All.</h4>
                 <p>We level the playing field in liquidity for individual investors. Everyone can seamlessly achieve
-                    returns similar to those of big market players and high-end investors.</p>
+                    returns similar to those of big market players and high-end investors</p>
                 <a href="#" class="hero-btn-a">
-                    <button class="hero-btn">
+                    <button class="hero-btn" tabindex="-1">
                         Launch App (Testnet)
                     </button>
                 </a>
