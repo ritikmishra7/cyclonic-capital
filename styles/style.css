@@ -635,7 +635,7 @@ button {
 .community-section {
     color: white;
     position: relative;
-    margin-bottom: 400px;
+    margin-bottom: 200px;
     position: relative;
 }
 
@@ -732,7 +732,7 @@ button {
 
 .community-video {
     position: absolute;
-    bottom: 18%;
+    bottom: 14%;
     right: -11%;
     overflow: hidden;
     width: 800px;
@@ -879,7 +879,7 @@ button {
 
     .community-video {
         width: 80%;
-        bottom: 16%;
+        bottom: 12%;
         right: -10%;
         overflow-x: hidden;
     }
