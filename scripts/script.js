@@ -29,7 +29,6 @@ function playVideoWhenInView(entries, observer) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             const video = entry.target;
-            video.currentTime = 0;
             video.play();
         } else {
             const video = entry.target;
@@ -49,11 +48,6 @@ const observerOptions = {
 videos.forEach(video => {
     const observer = new IntersectionObserver(playVideoWhenInView, observerOptions);
     observer.observe(video);
-
-    video.addEventListener('ended', () => {
-        video.currentTime = 0; // Set video to start from the beginning
-        video.play();
-    });
 });
 
 

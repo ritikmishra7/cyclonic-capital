@@ -5,10 +5,12 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Mulish', sans-serif;
+
 }
 
 html {
-    scroll-behavior: smooth
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -709,9 +711,9 @@ button {
 .a-community {
     display: flex;
     gap: 30px;
-    width: 90%;
-    padding: 30px 30px;
-    border-radius: 10px;
+    width: 70%;
+    padding: 40px 30px;
+    border-radius: 12px;
     margin-top: 10px;
     background-color: rgb(43, 49, 79, 0.7);
     backdrop-filter: blur(10px);
@@ -730,8 +732,17 @@ button {
 
 .community-video {
     position: absolute;
-    top: 50%;
-    right: -14%;
+    bottom: 18%;
+    right: -11%;
+    overflow: hidden;
+    width: 800px;
+    height: 500px;
+}
+
+.community-video video {
+    overflow-wrap: break-word;
+    width: 800px;
+    height: 500px;
 }
 
 
@@ -862,11 +873,15 @@ button {
         width: 90%;
     }
 
+    .a-community {
+        width: 98%;
+    }
+
     .community-video {
         width: 80%;
-        top: 20%;
-        right: 15%;
-        overflow: hidden;
+        bottom: 16%;
+        right: -10%;
+        overflow-x: hidden;
     }
 
     .roadmap-phases {
